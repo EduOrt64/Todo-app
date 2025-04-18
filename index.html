@@ -1,11 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Do-Doer</title>
-<script defer src="main.js"></script></head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script defer src="main.js"></script></head>
+  <body>
+    <header class="hero">
+      <div><h1><i class="fa-solid fa-cube"></i> Do-Doer</h1></div>
+
+      <div class="user-cont">
+        <img class="avatar" src="https://static.vecteezy.com/system/resources/previews/027/870/213/non_2x/cute-avatar-siberian-husky-head-simple-cartoon-illustration-dog-breeds-nature-concept-icon-isolated-vector.jpg" alt="husky-luke">
+        <h2>@huskyLuke </h2>
+      </div>
+    </header>
+
+    <div id="general-container">
+      <div class="left-menu">
+
+        <div class="home-list">
+          <ul>
+            <li id="my-day"><i class="fa-solid fa-clipboard"></i> My day</li>
+            <li><i class="fa-solid fa-inbox"></i> Inbox <span class="inbox-num">3</span></li>
+            <li id="urgent-btn"><i class="fa-solid fa-bolt"></i> Important</li>
+          </ul>
+        </div>
+       
+       <div id="projects-list">
+      <h2><i class="fa-solid fa-business-time"></i> My Projects</h2>
+      <ul id="project-list-name">
+
+      </ul>
+
+
+       </div>
+
+        <div class="menu-btns">
+          <button class="new-project-btn"><i class="fa-solid fa-plus"></i> New Project</button>
+        </div>
+      </div>
+
+      <div class="content-screen">
+
+        <div id="tasks-screen">
+
+          
+        </div>
+      
+       <div class="message-screen">
+      
+
+
     
-</body>
+
+       </div>
+
+       
+
+
+        <div id="form-container" class="hidden">
+          <button class="close-btn">&times;</button>
+          <form class="new-project-form">
+            <label for="project" name="project-name">Project's Name</label>
+            <input type="text" id="project" class="name-project" />
+            <label for="description">Description</label>
+            <textarea class="project-description" id="description"></textarea>
+
+            <div class="btn-cont">
+              <button class="btn-create-project">Create</button>
+              <button id="btn-add-task">Add Task</button>
+            </div>
+          </form>
+        </div>
+
+
+        <dialog>
+          <p>Are you sure you want to delete this project?</p>
+          <form method="dialog">
+            <button class="delete-project-confirm">Delete</button>
+            <button class="cancel-delete">Cancel</button>
+          </form>
+        </dialog>
+
+        <!--title,description,dueDate,priority,note,checklist-->
+
+        <div id="new-tasks-form" class="hidden">
+          <form class="new-task">
+            <button class="close-btn2">&times;</button>
+        
+            <label for="new-task-text">Title</label>
+            <input type="text" id="new-task-text" name="new-task-text" />
+        
+            <label for="new-task-desc">Description</label>
+            <textarea id="new-task-desc" name="new-task-desc"></textarea>
+        
+            <label for="due-date">Due Date</label>
+            <input type="date" id="due-date" name="due-date" />
+        
+            <label for="select">Priority</label>
+            <select id="select" name="select">
+              <option value="Urgent">Urgent</option>
+              <option value="Normal" selected>Normal</option>
+              <option value="Not a Priority">Not a Priority</option>
+            </select>
+        
+            <label for="notes">Note</label>
+            <textarea id="notes" name="notes"></textarea>
+        
+            <button id="add-task">Add Task</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
